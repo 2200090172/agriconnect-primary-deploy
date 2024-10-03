@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home.jsx';
+import Adminsignin from './components/signin/Adminsignin.jsx';
+import Farmersignin from './components/signin/Farmersignin.jsx';
+import Publicsignin from './components/signin/Publicsignin.jsx';
+import Expertsignin from './components/signin/Expertsignin.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/adminsignin" element={<Adminsignin />} />
+        <Route path="/farmersignin" element={<Farmersignin />} />
+        <Route path="/publicsignin" element={<Publicsignin />} />
+        <Route path="/expertsignin" element={<Expertsignin />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
