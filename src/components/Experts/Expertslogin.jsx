@@ -26,7 +26,7 @@ const ExpertLogin = () => {
         // For example:
         // const response = await axios.post("http://localhost:2014/expertlogin", formData);
         // Handle response...
-        navigate('/ExpertDashboard'); // Navigate to expert dashboard on successful login
+        navigate('/experthome'); // Navigate to expert dashboard on successful login
     };
 
     return (
