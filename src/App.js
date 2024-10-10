@@ -40,7 +40,7 @@ function App() {
         <Route path='/viewallfarmers' element={<Viewallfarmers />} />
         <Route path='/viewallexperts' element={<ViewallExperts />} />
         <Route path='/viewallsectors' element={<Viewallsectors />} />
-        <Route path="/About" element={<About/>}/> 
+        {/* <Route path="/About" element={<About/>}/>  */}
         <Route path="/farmerlogin" element={<FarmerLogin/>}/> 
        <Route path="/aboutfarmer" element={<Aboutfarmer/>}/> 
        <Route path="/expertlogin" element={<ExpertsLogin/>}/> 
