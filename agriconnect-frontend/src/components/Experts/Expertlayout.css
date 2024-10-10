@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800;900&display=swap');
 
 * {
@@ -11,7 +12,7 @@ body {
   overflow: hidden;
 }
 
-.container {
+.expert-container {
   max-height: 100vh;
   width: 100%;
   background-color: #131414;
@@ -20,7 +21,7 @@ body {
   overflow: hidden;
 }
 
-.navbar {
+.expert-navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +30,7 @@ body {
   height: 5rem;
 }
 
-.menu {
+.expert-menu {
   max-width: 72rem;
   width: 100%;
   height: 100%;
@@ -41,7 +42,7 @@ body {
   color: #fff;
 }
 
-.logo {
+.expert-logo {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -50,13 +51,13 @@ body {
   margin-top: 20px;
 }
 
-.logo span {
+.expert-logo span {
   font-size: 1.8rem;
   margin-left: 5px;
   color: #e20f2f;
 }
 
-.hamburger-menu {
+.expert-hamburger-menu {
   height: 4rem;
   width: 3rem;
   cursor: pointer;
@@ -65,7 +66,7 @@ body {
   justify-content: flex-end;
 }
 
-.bar {
+.expert-bar {
   width: 1.9rem;
   height: 1.5px;
   border-radius: 2px;
@@ -74,8 +75,8 @@ body {
   position: relative;
 }
 
-.bar::before,
-.bar::after {
+.expert-bar::before,
+.expert-bar::after {
   content: "";
   position: absolute;
   width: inherit;
@@ -84,19 +85,19 @@ body {
   transition: 0.5s;
 }
 
-.bar::before {
+.expert-bar::before {
   transform: translateY(-9px);
 }
 
-.bar::after {
+.expert-bar::after {
   transform: translateY(9px);
 }
 
-.main-container {
+.expert-main-container {
   overflow: hidden;
 }
 
-.main {
+.expert-main {
   position: relative;
   width: 100%;
   left: 0;
@@ -106,21 +107,6 @@ body {
   transform-style: preserve-3d;
   transition: 0.5s;
 }
-/* 
-header {
-  min-height: 100vh;
-  width: 100%;
-  background: url("https://i.postimg.cc/0Q09GwLQ/image.jpg") no-repeat top center / cover;
-  position: relative;
-} */
-
-.home-header {
-    min-height: 100vh;
-    width: 100%;
-    background: url(../assets/images/background.jpg) no-repeat top center / cover;
-    position: relative;
-  }
-  
 
 .overlay {
   position: absolute;
@@ -167,20 +153,20 @@ header {
   text-decoration: none;
 }
 
-.container.active .bar {
+.expert-container.expert-active .expert-bar {
   transform: rotate(360deg);
   background-color: transparent;
 }
 
-.container.active .bar::before {
+.expert-container.expert-active .expert-bar::before {
   transform: translateY(0) rotate(45deg);
 }
 
-.container.active .bar::after {
+.expert-container.expert-active .expert-bar::after {
   transform: translateY(0) rotate(-45deg);
 }
 
-.container.active .main {
+.expert-container.expert-active .expert-main {
   animation: main-animation 0.5s ease;
   cursor: pointer;
   transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(310px) scale(0.5);
@@ -195,7 +181,7 @@ header {
   }
 }
 
-.links {
+.expert-links {
   position: absolute;
   width: 30%;
   right: 0;
@@ -217,7 +203,7 @@ ul li.active a {
   color: #e20f2f;
 }
 
-.links a {
+.expert-links a {
   text-decoration: none;
   color: #eee;
   padding: 0.7rem 0;
@@ -232,11 +218,11 @@ ul li.active a {
   animation: hide 0.5s forwards ease;
 }
 
-.links a:hover {
+.expert-links a:hover {
   color: #e20f2f;
 }
 
-.container.active .links a {
+.expert-container.expert-active .expert-links a {
   animation: appear 0.5s forwards ease var(--i);
 }
 
@@ -262,7 +248,7 @@ ul li.active a {
   }
 }
 
-.shadow {
+.expert-shadow {
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -274,17 +260,17 @@ ul li.active a {
   background-color: #fff;
 }
 
-.shadow.one {
+.expert-shadow.expert-one {
   z-index: -1;
   opacity: 0.15;
 }
 
-.shadow.two {
+.expert-shadow.expert-two {
   z-index: -2;
   opacity: 0.1;
 }
 
-.container.active .shadow.one {
+.expert-container.expert-active .expert-shadow.expert-one {
   animation: shadow-one 0.6s ease-out;
   transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(215px) scale(0.5);
 }
@@ -294,34 +280,41 @@ ul li.active a {
     transform: translate(0);
   }
   5% {
-    transform:perspective(1300px) rotateY(20deg) translateY(10px) translateZ(310px) scale(0.5);
-}
-100% {
-  transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(215px) scale(0.5);
-}
+    transform: translate(0);
+  }
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(215px) scale(0.5);
+  }
 }
 
-.container.active .shadow.two {
-animation: shadow-two 0.6s ease-out;
-transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(120px) scale(0.5);
+.expert-container.expert-active .expert-shadow.expert-two {
+  animation: shadow-two 0.5s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(110px) scale(0.5);
 }
 
 @keyframes shadow-two {
-0% {
-  transform: translate(0);
-}
-20% {
-  transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(310px) scale(0.5);
-}
-100% {
-  transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(120px) scale(0.5);
-}
-}
-
-.container.active .main:hover + .shadow.one {
-transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(230px) scale(0.5);
+  0% {
+    transform: translate(0);
+  }
+  5% {
+    transform: translate(0);
+  }
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(110px) scale(0.5);
+  }
 }
 
-.container.active .main:hover {
-transform: perspective(1300px) rotateY(20deg) translateY(10px) translateZ(340px) scale(0.5);
+@media screen and (max-width: 900px) {
+  .expert-links {
+    width: 60%;
+    margin-left: 2rem;
+  }
+
+  .expert-links a {
+    font-size: 1.5rem;
+  }
+
+  .expert-container {
+    background-image: linear-gradient(135deg, #131414 0%, #000000 100%);
+  }
 }

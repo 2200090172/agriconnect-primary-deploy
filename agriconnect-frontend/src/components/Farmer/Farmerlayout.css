@@ -106,18 +106,12 @@ body {
   transform-style: preserve-3d;
   transition: 0.5s;
 }
-/* 
-header {
-  min-height: 100vh;
-  width: 100%;
-  background: url("https://i.postimg.cc/0Q09GwLQ/image.jpg") no-repeat top center / cover;
-  position: relative;
-} */
 
-.home-header {
+
+.farmer-header {
     min-height: 100vh;
     width: 100%;
-    background: url(../assets/images/background.jpg) no-repeat top center / cover;
+    background: url(../../assets/images/farmer-background.jpg) no-repeat top center / cover;
     position: relative;
   }
   

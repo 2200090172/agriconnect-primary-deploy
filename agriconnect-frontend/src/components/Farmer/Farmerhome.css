@@ -1,0 +1,70 @@
+.farmer-header {
+    min-height: 100vh;
+    width: 100%;
+    background: url(../../assets/images/farmer-background.jpg) no-repeat top center / cover;
+    position: relative;
+}
+/* Overlay styling */
+.overlay {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Makes the title all caps */
+  }
+  
+  /* Description styling */
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Button styling */
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #4caf50; /* AgriConnect green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Removes underline */
+  }
+  
+  .btn:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  
+    .overlay {
+      padding: 20px;
+    }
+  }
+  
