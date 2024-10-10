@@ -100,6 +100,8 @@ import Farmersignin from "./signin/Farmersignin";
 import Publicsignin from "./signin/Publicsignin";
 import Expertsigin from "./signin/Expertsignin";
 import Landingpage from "./signin/Landingpage";
+import backgroundImage from '../assets/images/background.jpg'; 
+
 
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
@@ -109,7 +111,9 @@ const Home = () => {
   };
 
   return (
-    <div className={`container ${isActive ? "active" : ""}`}>
+    
+    <div className={`container ${isActive ? "active" : ""}`}
+    style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="navbar">
         <div className="menu">
           <h3 className="logo">
@@ -122,7 +126,7 @@ const Home = () => {
       </div>
       <div className="main-container">
         <div className="main">
-          <header>
+          <header className="home-header">
             <div className="overlay">
               <h2 className="title">Empowering Farmers for a Sustainable Future</h2>
               <p className="description">
@@ -173,6 +177,7 @@ const Home = () => {
       </div>
       
     </div>
+    
   );
 };
 

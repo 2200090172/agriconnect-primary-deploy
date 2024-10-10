@@ -20,6 +20,8 @@ import Aboutfarmer from './components/Farmer/Aboutfarmer.jsx';
 import ExpertsLogin from './components/Experts/Expertslogin.jsx'; 
 import Expertdashboard from './components/Experts/Expertdashboard.jsx'; 
 import PublicLogin from './components/Public/PublicLogin.jsx'; 
+import Farmerhome from './components/Farmer/Farmerhome.jsx';
+import Experthome from './components/Experts/Experthome.jsx';
 
 
 function App() {
@@ -44,7 +46,8 @@ function App() {
        <Route path="/expertlogin" element={<ExpertsLogin/>}/> 
        <Route path="/expertdashboard"element={<Expertdashboard/>}/> 
        <Route path="/publiclogin" element={<PublicLogin/>}/> 
-
+       <Route path="/farmerhome" element={<Farmerhome />}/> 
+       <Route path="/experthome" element={<Experthome />}/> 
 
       </Routes>
     </BrowserRouter>

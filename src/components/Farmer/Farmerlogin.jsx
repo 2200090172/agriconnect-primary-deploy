@@ -23,7 +23,7 @@ const FarmerLogin = () => {
 
         // Simulated login logic
         // Add your login API call here if needed.
-        navigate('/Aboutfarmer');
+        navigate('/farmerhome');
     };
 
     return (

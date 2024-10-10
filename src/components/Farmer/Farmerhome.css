@@ -1,12 +1,10 @@
-
-.header {
-  min-height: 100vh;
-  width: 100%;
-  background: url(../../assets/images/admin-home.jpg) no-repeat top center / cover;
-  position: relative;
+.farmer-header {
+    min-height: 100vh;
+    width: 100%;
+    background: url(../../assets/images/farmer-background.jpg) no-repeat top center / cover;
+    position: relative;
 }
-
-
+/* Overlay styling */
 .overlay {
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
