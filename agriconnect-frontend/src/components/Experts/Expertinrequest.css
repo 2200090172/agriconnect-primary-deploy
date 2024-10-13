@@ -1,0 +1,18 @@
+button {
+  position: absolute;
+  bottom: 70px; /* Adjust to control vertical spacing */
+  right: 70px; /* Adjust to control horizontal spacing */
+  padding: 10px 20px; /* Button padding for size */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto; /* Ensure the button does not stretch horizontally */
+  display: inline-block; /* Make sure it only takes the space it needs */
+}
+
+button:hover {
+  background-color: #0056b3;
+}

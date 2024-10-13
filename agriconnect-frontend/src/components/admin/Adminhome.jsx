@@ -25,11 +25,13 @@
 //         <div className="main">
 //           <header>
 //             <div className="overlay">
-//               <h2 className="title">Admin Page</h2>
+//               <h2 className="title">Admin Signin</h2>
 //               <p className="description">
-//                 “Admin ROle bhayya!!”
+//                 “Admin ROle Bhayya”
 //               </p>
-              
+//               <a href="#" className="btn">
+//                 Read More
+//               </a>
 //             </div>
 //           </header>
 //         </div>
@@ -80,31 +82,3 @@
 // };
 
 // export default Adminhome;
-
-
-
-import React from "react";
-import Adminlayout from "./Adminlayout";
-const Adminhome = () => {
-  return (
-    <Adminlayout>
-      <div className="main-container">
-         <div className="main">
-           <header>
-             <div className="overlay">
-               <h2 className="title">Admin Page</h2>
-               <p className="description">
-                 “Admin ROle bhayya!!”
-               </p>
-            
-             </div>
-           </header>
-         </div>
-         <div className="shadow one"></div>
-         <div className="shadow two"></div>
-       </div>
-    </Adminlayout>
-  );
-};
-
-export default Adminhome;

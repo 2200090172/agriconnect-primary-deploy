@@ -1,65 +1,18 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import "./Adminlayout.css";
-
-// const Adminlayout = ({ children }) => {
-//   return (
-//     <div className="container">
-//       <div className="navbar">
-//         <div className="menu">
-//           <h3 className="logo">
-//             Agri<span>Connect</span>
-//           </h3>
-//           <div className="hamburger-menu">
-//             <div className="bar"></div>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="links">
-//         <ul>
-//           <li className="active">
-//             <Link to="/" style={{ "--i": "0.05s" }}>Home</Link>
-//           </li>
-//           <li>
-//             <Link to="/adminsignin" style={{ "--i": "0.15s" }}>Sign In as Admin</Link>
-//           </li>
-//           <li>
-//             <Link to="/farmersignin" style={{ "--i": "0.2s" }}>Sign In as Farmer</Link>
-//           </li>
-//           <li>
-//             <Link to="/publicsignin" style={{ "--i": "0.25s" }}>Sign In as Public</Link>
-//           </li>
-//           <li>
-//             <Link to="/expertsignin" style={{ "--i": "0.25s" }}>Sign In as Expert</Link>
-//           </li>
-//         </ul>
-//       </div>
-
-//       {/* This renders the main content of the page */}
-//       <div className="content">
-//         {children}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Adminlayout;
-
-
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import "./Adminlayout.css";
+// import backgroundImage from '../../assets/images/admin-home.jpg'; // Import the image if required
 
-const Adminlayout = ({ children }) => {
-  const [isActive, setIsActive] = useState(false); // State to manage menu toggle
+const AdminLayout = ({ children }) => {
+  const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
-    setIsActive(!isActive); // Toggle the active state
+    setIsActive(!isActive);
   };
 
   return (
-    <div className={`container ${isActive ? "active" : ""}`}>
+    <div className={`container ${isActive ? "active" : ""}`}
+    >
       <div className="navbar">
         <div className="menu">
           <h3 className="logo">
@@ -70,33 +23,54 @@ const Adminlayout = ({ children }) => {
           </div>
         </div>
       </div>
-
+      <div className="main-container">
+        <div className="main">
+          {children} {/* This will render the child component */}
+        </div>
+        <div className="shadow one"></div>
+        <div className="shadow two"></div>
+      </div>
       <div className="links">
         <ul>
           <li className="active">
-            <Link to="/" style={{ "--i": "0.05s" }}>Home</Link>
+            <a href="/adminhome" style={{ "--i": "0.05s" }}>
+              Admin Home
+            </a>
           </li>
           <li>
-            <Link to="/adminsignin" style={{ "--i": "0.15s" }}>Sign In as Admin</Link>
+            <Link to="/addfarmer" style={{ "--i": "0.15s" }}>
+              Add Farmer
+            </Link>
           </li>
           <li>
-            <Link to="/farmersignin" style={{ "--i": "0.2s" }}>Sign In as Farmer</Link>
+            <Link to="/viewallfarmers" style={{ "--i": "0.2s" }}>
+              View All Farmers
+            </Link>
           </li>
           <li>
-            <Link to="/publicsignin" style={{ "--i": "0.25s" }}>Sign In as Public</Link>
+            <Link to="/addexpert" style={{ "--i": "0.25s" }}>
+              Add Expert
+            </Link>
           </li>
           <li>
-            <Link to="/expertsignin" style={{ "--i": "0.25s" }}>Sign In as Expert</Link>
+            <Link to="/viewallexperts" style={{ "--i": "0.25s" }}>
+              View All Experts
+            </Link>
+          </li>
+          <li>
+            <Link to="/addsector" style={{ "--i": "0.25s" }}>
+              Add Sector
+            </Link>
+          </li>
+          <li>
+            <Link to="/viewallsectors" style={{ "--i": "0.25s" }}>
+              View All Sectors
+            </Link>
           </li>
         </ul>
-      </div>
-
-      {/* This renders the main content of the page */}
-      <div className="content">
-        {children}
       </div>
     </div>
   );
 };
 
-export default Adminlayout;
+export default AdminLayout;
