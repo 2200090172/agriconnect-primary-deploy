@@ -1,0 +1,75 @@
+.weather {
+    position: relative;
+    max-width: 300px; /* Fixed width for consistent sizing */
+    height: 400px; /* Fixed height */
+    margin: 50px auto; /* Centering the container */
+    padding: 20px; /* Padding for inner spacing */
+    background-color: #f73d3ddb; /* Dark background matching your theme */
+    background-image: linear-gradient(135deg, #f73d3ddb 0%, #f73d3ddb 100%); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* White text for contrast */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-bar input {
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 25px; /* Rounded edges */
+    padding: 0 20px; /* Horizontal padding */
+    color: #131414; /* Dark text color */
+    background: #ebfffc; /* Light background for input */
+    font-size: 16px; /* Adjusted font size */
+}
+
+.search-bar img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.weather-icon {
+    width: 60px; /* Adjusted icon size */
+    height: 60px; /* Maintain aspect ratio */
+    margin: 10px 0;
+}
+
+.temperature {
+    font-size: 48px; /* Size for temperature */
+    line-height: 1; /* Single line height */
+}
+
+.location {
+    font-size: 24px; /* Size for location */
+    margin-top: 5px; /* Space above */
+}
+
+.weather-data {
+    width: 100%; /* Full width for data section */
+    margin-top: 20px; /* Space above */
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-data .col {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px; /* Spacing between items */
+}
+
+.weather-data .col span {
+    display: block;
+    font-size: 16px; /* Size for data labels */
+}
+
+.weather-data .col img {
+    width: 26px; /* Icon size for weather data */
+}

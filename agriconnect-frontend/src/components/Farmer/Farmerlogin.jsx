@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Farmerlogin.css'; // Add your custom CSS or use Tailwind CSS
+import Farmerlayout from './Farmerlayout';
 
 const FarmerLogin = () => {
     const navigate = useNavigate();
@@ -27,6 +28,7 @@ const FarmerLogin = () => {
     };
 
     return (
+        <Farmerlayout>
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
             <div className="card bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
                 <h2 className="text-3xl font-bold mb-4 text-green-600 text-center">Farmer Login</h2>
@@ -69,6 +71,7 @@ const FarmerLogin = () => {
                 </p>
             </div>
         </div>
+        </Farmerlayout>
     );
 };
 

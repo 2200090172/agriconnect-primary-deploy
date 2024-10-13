@@ -1,6 +1,33 @@
 /* Addexpert.css */
 
 /* Form styling */
+.addexpert-container {
+  min-height: 100vh;
+  background: url(../../assets/images/admin-home.jpg) no-repeat center center / cover; /* Update the path to your background image */
+  position: relative;
+}
+
+.addexpert-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity for shadow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addexpert-form {
+  max-width: 600px; /* Set a max-width for the form */
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  padding: 2rem;
+  border-radius: 10px; /* Rounded corners for the form */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect for the form */
+}
+
+
 form {
     background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
     padding: 20px;

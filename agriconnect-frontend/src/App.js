@@ -22,6 +22,8 @@ import Expertdashboard from './components/Experts/Expertdashboard.jsx';
 import PublicLogin from './components/Public/PublicLogin.jsx'; 
 import Farmerhome from './components/Farmer/Farmerhome.jsx';
 import Experthome from './components/Experts/Experthome.jsx';
+import Expertinrequest from './components/Experts/Expertinrequest.jsx';
+import Expertweather from './components/Experts/Expertweather.jsx';
 
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
         <Route path="/farmersignin" element={<Farmersignin />} />
         <Route path="/publicsignin" element={<Publicsignin />} />
         <Route path="/expertsignin" element={<Expertsignin />} />
+        <Route path="/adminlogin" element={<Adminhome />} />
         <Route path="/adminhome" element={<Adminhome />} />
         <Route path='/addfarmer' element={<Addfarmer />} />
         <Route path='/addexpert' element={<Addexpert />} />
@@ -40,7 +43,8 @@ function App() {
         <Route path='/viewallfarmers' element={<Viewallfarmers />} />
         <Route path='/viewallexperts' element={<ViewallExperts />} />
         <Route path='/viewallsectors' element={<Viewallsectors />} />
-        <Route path="/About" element={<About/>}/> 
+        {/* <Route path="/About" element={<About/>}/>  */}
+
         <Route path="/farmerlogin" element={<FarmerLogin/>}/> 
        <Route path="/aboutfarmer" element={<Aboutfarmer/>}/> 
        <Route path="/expertlogin" element={<ExpertsLogin/>}/> 
@@ -48,6 +52,10 @@ function App() {
        <Route path="/publiclogin" element={<PublicLogin/>}/> 
        <Route path="/farmerhome" element={<Farmerhome />}/> 
        <Route path="/experthome" element={<Experthome />}/> 
+       <Route path="/expertinrequests" element={<Expertinrequest />}/> 
+       <Route path="/expertweather" element={<Expertweather />}/> 
+
+       
 
       </Routes>
     </BrowserRouter>

@@ -7,7 +7,7 @@ const Farmerhome = () => {
     <header className='farmer-header'>
         <div className="overlay">
           <h2 className="title">Welcome, Farmer!!</h2>
-          <p className="description">Thank you for being a vital part of the AgriConnect community. Continue managing resources, guiding users, and driving impactful decisions to support farming excellence</p>
+          <p className="description">Thank you for being an essential part of the AgriConnect community. Continue utilizing our platform, sharing your experiences, and making informed choices to enhance your farming practices.</p>
           {/* <a href="#" className="btn">
             Read More
           </a> */}

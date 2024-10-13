@@ -34,7 +34,6 @@ const AddSector = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (API call, etc.)
     alert("Sector added successfully");
     console.log(sector);
     setSector({
@@ -50,43 +49,47 @@ const AddSector = () => {
 
   return (
     <Adminlayout>
-      <form onSubmit={handleSubmit}>
-        <h2>Add Sector</h2>
-        <div>
-          <label>Sector Name:</label>
-          <select name="sectorName" value={sector.sectorName} onChange={handleChange} required>
-            <option value="">Select a sector</option>
-            {sectors.map((sec, index) => (
-              <option key={index} value={sec}>{sec}</option>
-            ))}
-          </select>
+      <div className="addsector-container">
+        <div className="addsector-overlay">
+          <form className="addsector-form" onSubmit={handleSubmit}>
+            <h2>Add Sector</h2>
+            <div>
+              <label>Sector Name:</label>
+              <select name="sectorName" value={sector.sectorName} onChange={handleChange} required>
+                <option value="">Select a sector</option>
+                {sectors.map((sec, index) => (
+                  <option key={index} value={sec}>{sec}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label>Description:</label>
+              <textarea name="description" value={sector.description} onChange={handleChange} required />
+            </div>
+            <div>
+              <label>Services Offered:</label>
+              <input type="text" name="servicesOffered" value={sector.servicesOffered} onChange={handleChange} />
+            </div>
+            <div>
+              <label>Contact Person:</label>
+              <input type="text" name="contactPerson" value={sector.contactPerson} onChange={handleChange} required />
+            </div>
+            <div>
+              <label>Contact Email:</label>
+              <input type="email" name="contactEmail" value={sector.contactEmail} onChange={handleChange} required />
+            </div>
+            <div>
+              <label>Sector Location:</label>
+              <input type="text" name="sectorLocation" value={sector.sectorLocation} onChange={handleChange} />
+            </div>
+            {/* <div>
+              <label>Website URL:</label>
+              <textarea name="websiteUrl" value={sector.websiteUrl} onChange={handleChange} rows="3" required /> 
+            </div> */}
+            <button type="submit">Add Sector</button>
+          </form>
         </div>
-        <div>
-          <label>Description:</label>
-          <textarea name="description" value={sector.description} onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Services Offered:</label>
-          <input type="text" name="servicesOffered" value={sector.servicesOffered} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Contact Person:</label>
-          <input type="text" name="contactPerson" value={sector.contactPerson} onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Contact Email:</label>
-          <input type="email" name="contactEmail" value={sector.contactEmail} onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Sector Location:</label>
-          <input type="text" name="sectorLocation" value={sector.sectorLocation} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Website URL:</label>
-          <textarea name="websiteUrl" value={sector.websiteUrl} onChange={handleChange} rows="3" required /> {/* Updated to textarea */}
-        </div>
-        <button type="submit">Add Sector</button>
-      </form>
+      </div>
     </Adminlayout>
   );
 };
